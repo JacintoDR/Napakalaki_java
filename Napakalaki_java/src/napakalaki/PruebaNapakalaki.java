@@ -20,6 +20,9 @@ public class PruebaNapakalaki {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        
+        
+        
         ArrayList<Monster> monstruos = new ArrayList();
         //El rey de rosa
         BadConsequence badConsequence = new BadConsequence("Pierdes 5 niveles y 3 tesoros visibles", 5, 3, 0);
