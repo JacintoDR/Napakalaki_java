@@ -103,5 +103,5 @@ public class PruebaNapakalaki {
         monstruos.add(new Monster("El lenguas", 20, badConsequence, prize));
         
     }
-    
+    //prueba
 }
