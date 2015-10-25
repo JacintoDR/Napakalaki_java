@@ -12,6 +12,8 @@ import java.util.Arrays;
  *
  * @author a
  */
+//consultas para la práctica 1
+
 public class PruebaNapakalaki {
     void imprime(ArrayList<Monster> a){
         for(Monster m: a){
