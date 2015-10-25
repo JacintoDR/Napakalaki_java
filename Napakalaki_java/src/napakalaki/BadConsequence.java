@@ -23,23 +23,9 @@ public class BadConsequence {
     
     public BadConsequence(String text, int levels, int nVisible, int nHidden){
         this.text = text;
-        this.levels -= levels;
-        this.nVisibleTreasures -= nVisible;
-        this.nHiddenTreasures -= nHidden;
- 
-    }
-    
-    public BadConsequence(String text, int levels, int nVisible){
-        this.text = text;
-        this.levels -= levels;
+        this.levels = levels;
         this.nVisibleTreasures = nVisible;
-    }
-    
-    public BadConsequence(String text, int levels, int nHidden, boolean death){
-        this.text = text;
-        this.levels -= levels;
-        this.nVisibleTreasures -= nHidden;
-        this.death = death;
+        this.nHiddenTreasures = nHidden;
     }
     
     public BadConsequence(String text, boolean death){
@@ -55,12 +41,6 @@ public class BadConsequence {
         this.specificHiddenTreasures = tHidden;
     }
     
-    public BadConsequence(String text, int levels, ArrayList<TreasureKind> tVisible){
-        this.text = text;
-        this.levels = levels;
-        this.specificVisibleTreasures = tVisible;
-    }
-
     public String getText(){
         return text;
     }    
