@@ -27,4 +27,12 @@ public class Prize{
     public String toString(){
         return "Treasures = " + Integer.toString(treasures) + " levels = " + Integer.toString(level);
     }    
+    
+    public boolean gananciaNivelesSuperior1(){
+        if(level > 1)
+            return true;
+        else
+            return false;
+    }
+
 }

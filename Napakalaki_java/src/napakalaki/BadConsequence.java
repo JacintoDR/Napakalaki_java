@@ -18,7 +18,7 @@ public class BadConsequence {
     private int nHiddenTreasures;
     private boolean death;
     
-    private ArrayList<TreasureKind> specificHiddenTreasures = new ArrayList();
+    private ArrayList<TreasureKind> specificHiddenTreasures = new ArrayList<TreasureKind>();
     private ArrayList<TreasureKind> specificVisibleTreasures = new ArrayList();
     
     public BadConsequence(String text, int levels, int nVisible, int nHidden){
@@ -26,6 +26,7 @@ public class BadConsequence {
         this.levels -= levels;
         this.nVisibleTreasures -= nVisible;
         this.nHiddenTreasures -= nHidden;
+ 
     }
     
     public BadConsequence(String text, int levels, int nVisible){
@@ -83,4 +84,18 @@ public class BadConsequence {
                 " specificHiddenTreasures = " + specificHiddenTreasures.toString() +
                 " specificVisibleTreasures = " + specificVisibleTreasures.toString();
     }        
+
+    public boolean soloPierdeNiveles(){
+        if(levels>1 && nVisibleTreasures==0 && nHiddenTreasures==0 && death==false)
+            return true;
+        else
+            return false;
+    }
+    public boolean pierdeTesoros(){
+        if(specificHiddenTreasures != null || specificVisibleTreasures != null)
+            return true;
+        else
+            return false;
+    }
+
 }

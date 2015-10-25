@@ -15,7 +15,7 @@ import java.util.Arrays;
 //consultas para la práctica 1
 
 public class PruebaNapakalaki {
-    void imprime(ArrayList<Monster> a){
+    static void imprime(ArrayList<Monster> a){
         for(Monster m: a){
             System.out.println(m.toString());
         }
@@ -107,6 +107,37 @@ public class PruebaNapakalaki {
                 "y 5 tesoros visibles", 2, 5, 0);
         prize = new Prize(1,1);
         monstruos.add(new Monster("El lenguas", 20, badConsequence, prize));
+        
+        
+        //consultas para la práctica 1
+        ArrayList<Monster> aux = new ArrayList();
+        for(Monster m: monstruos){
+            if(m.nivelCombateSuperior10())
+                aux.add(m);
+        }
+        imprime(aux);
+        aux = null;
+
+        for(Monster m: monstruos){
+            if(m.soloPierdeNiveles())
+                aux.add(m);
+        }
+        imprime(aux);
+        aux = null;
+        
+        for(Monster m: monstruos){
+            if(m.gananciaNivelesSuperior1())
+                aux.add(m);
+        }
+        imprime(aux);
+        aux = null;
+        
+        for(Monster m: monstruos){
+            if(m.pierdeTesoros())
+                aux.add(m);
+        }
+        imprime(aux);
+        aux = null;
         
     }
     
