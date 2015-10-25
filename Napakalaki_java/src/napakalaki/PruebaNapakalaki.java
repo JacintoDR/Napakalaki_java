@@ -12,8 +12,14 @@ import java.util.Arrays;
  *
  * @author a
  */
-public class PruebaNapakalaki {
+//consultas para la práctica 1
 
+public class PruebaNapakalaki {
+    void imprime(ArrayList<Monster> a){
+        for(Monster m: a){
+            System.out.println(m.toString());
+        }
+    }
     /**
      * @param args the command line arguments
      */
