@@ -57,13 +57,21 @@ public class BadConsequence {
         return death;
     }
     public String toString(){
-        return "Mal rollo = " + text + " levels = " + Integer.toString(levels) +
+        String cadena =  "Mal rollo = " + text + " levels = " + Integer.toString(levels) +
                 " tesoros visibles = " + Integer.toString(nVisibleTreasures) +
                 " tesoros no visibles = " + Integer.toString(nHiddenTreasures) +
                 " death = " + Boolean.toString(death);
+        for(TreasureKind el: specificHiddenTreasures){
+            cadena = cadena + el.toString() + " ";
+        }
+        for(TreasureKind el: specificVisibleTreasures){
+            cadena = cadena + el.toString() + " ";
+        }
+
 //                " death = " + Boolean.toString(death) +
 //                " specificHiddenTreasures = " + specificHiddenTreasures.toString() +
 //                " specificVisibleTreasures = " + specificVisibleTreasures.toString();
+        return cadena;
     }        
 
     
