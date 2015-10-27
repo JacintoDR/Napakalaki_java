@@ -66,6 +66,7 @@ public class BadConsequence {
 //                " specificVisibleTreasures = " + specificVisibleTreasures.toString();
     }        
 
+    
     public boolean soloPierdeNiveles(){
         if(levels>1 && nVisibleTreasures==0 && nHiddenTreasures==0 && death==false)
             return true;
