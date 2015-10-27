@@ -32,7 +32,8 @@ public class Monster {
         return combatLevel;
     }
     public String toString(){
-        return "Nombre = " + name + " Nivel combate = " + Integer.toString(combatLevel);
+        return "Nombre = " + name + " Nivel combate = " + Integer.toString(combatLevel) +
+                "\nPremio = " + price.toString() + " Mal rollo = " + bc.toString();
     }    
     
     public boolean nivelCombateSuperior10(){
