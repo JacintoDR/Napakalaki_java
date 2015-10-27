@@ -60,9 +60,10 @@ public class BadConsequence {
         return "Mal rollo = " + text + " levels = " + Integer.toString(levels) +
                 " tesoros visibles = " + Integer.toString(nVisibleTreasures) +
                 " tesoros no visibles = " + Integer.toString(nHiddenTreasures) +
-                " death = " + Boolean.toString(death) +
-                " specificHiddenTreasures = " + specificHiddenTreasures.toString() +
-                " specificVisibleTreasures = " + specificVisibleTreasures.toString();
+                " death = " + Boolean.toString(death);
+//                " death = " + Boolean.toString(death) +
+//                " specificHiddenTreasures = " + specificHiddenTreasures.toString() +
+//                " specificVisibleTreasures = " + specificVisibleTreasures.toString();
     }        
 
     public boolean soloPierdeNiveles(){

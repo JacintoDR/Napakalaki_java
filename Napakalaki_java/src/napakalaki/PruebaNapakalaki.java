@@ -122,27 +122,34 @@ public class PruebaNapakalaki {
         
         //consultas para la práctica 1
         ArrayList<Monster> aux = new ArrayList();
+        System.out.println("Mostrar monstruos con nivel de combate superior a 10");
         for(Monster m: monstruos){
             if(m.nivelCombateSuperior10())
                 aux.add(m);
         }
         imprime(aux);
         aux = null;
+        aux = new ArrayList();
 
+        System.out.println("\nMostrar monstruos que implican solo pérdida de niveles");
         for(Monster m: monstruos){
             if(m.soloPierdeNiveles())
                 aux.add(m);
         }
         imprime(aux);
         aux = null;
+        aux = new ArrayList();
         
+        System.out.println("\nMostrar monstruos con ganancia niveles superior a 1");
         for(Monster m: monstruos){
             if(m.gananciaNivelesSuperior1())
                 aux.add(m);
         }
         imprime(aux);
         aux = null;
+        aux = new ArrayList();
         
+        System.out.println("\nMostrar monstruos cuyo mal rollo implica pérdida de tesoros");
         for(Monster m: monstruos){
             if(m.pierdeTesoros())
                 aux.add(m);
