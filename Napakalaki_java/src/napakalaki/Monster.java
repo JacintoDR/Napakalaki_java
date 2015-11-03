@@ -5,6 +5,8 @@
  */
 package napakalaki;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author a
@@ -42,6 +44,23 @@ public class Monster {
         
     }
     public String toString(){
-        return "Nombre = " + name + " Nivel combate = " + Integer.toString(combatLevel);
+        return "Nombre = " + name + " Nivel combate = " + Integer.toString(combatLevel) +
+                "\nPremio = " + price.toString() + " Mal rollo = " + bc.toString();
     }    
+    
+    public boolean nivelCombateSuperior10(){
+        if(combatLevel > 10)
+            return true;
+        else
+            return false;
+    }
+    public boolean soloPierdeNiveles(){
+        return bc.soloPierdeNiveles();
+    }
+    public boolean gananciaNivelesSuperior1(){
+        return price.gananciaNivelesSuperior1();
+    }
+    public boolean pierdeTesoros(){
+        return bc.pierdeTesoros();
+    }
 }
