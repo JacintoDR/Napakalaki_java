@@ -75,6 +75,28 @@ public class BadConsequence {
     public boolean getDeath(){
         return death;
     }
+    public ArrayList<TreasureKind> getSpecificVisibleTreasures(){
+        return specificVisibleTreasures;
+    }
+    public ArrayList<TreasureKind> getSpecificHiddenTreasures(){
+        return specificVisibleTreasures;
+    }
+    public void substractVisibleTreasures(){
+        
+    }
+    public void substractHiddenTreasures(){
+        
+    }
+    public isEmpty(){
+        
+    }
+    public BadConsequence adjustToFitTreasureLists(ArrayList <Treasure> v, ArrayList<Treasure> h){
+        
+    }
+    public boolean myBadConsequeseIsDeath(){
+        
+    }
+    
     public String toString(){
         return "Mal rollo = " + text + " levels = " + Integer.toString(levels) +
                 " tesoros visibles = " + Integer.toString(nVisibleTreasures) +

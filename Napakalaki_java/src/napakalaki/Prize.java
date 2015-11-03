@@ -24,6 +24,14 @@ public class Prize{
     public int getLevel(){
         return level;
     }
+    public void setTreasures(int treasures) {
+        this.treasures = treasures;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
     public String toString(){
         return "Treasures = " + Integer.toString(treasures) + " levels = " + Integer.toString(level);
     }    
