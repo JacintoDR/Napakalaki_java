@@ -31,6 +31,18 @@ public class Monster {
     public int getCombatLevel(){
         return combatLevel;
     }
+    public BadConsequence getBadConsequence(){
+        return bc;
+    }
+    public int getLevelGained(){
+        
+    }
+    public int getTreasuresGained(){
+        
+    }
+    public boolean kills(){
+        
+    }
     public String toString(){
         return "Nombre = " + name + " Nivel combate = " + Integer.toString(combatLevel) +
                 "\nPremio = " + price.toString() + " Mal rollo = " + bc.toString();
