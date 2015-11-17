@@ -21,7 +21,7 @@ public class Player {
     private ArrayList<Treasure> visibleTreasures=new ArrayList();
     private BadConsequence pendingBadConsequence;
     ArrayList<Monster> friends;
-    ArrayList<Life> live;
+    //ArrayList<Life> live;
     
  public Player(String name)
  {
@@ -158,7 +158,7 @@ public void discardAllTreasures()
 
 
 //EXAMEN
-public void addLife(Life l)
+/*public void addLife(Life l)
 {
     live.add(l);
 }
@@ -167,6 +167,6 @@ public void addFriend(Monster m)
     friends.add(m);
 }
 //FIN EXAMEN
-
+*/
 
 }
