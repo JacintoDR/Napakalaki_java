@@ -1,91 +1,95 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package napakalaki;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author a
- */
 public class BadConsequence {
     private String text;
     private int levels;
     private int nVisibleTreasures;
     private int nHiddenTreasures;
     private boolean death;
-    
-    private ArrayList<TreasureKind> specificHiddenTreasures = new ArrayList<TreasureKind>();
+    private ArrayList<TreasureKind> specificHiddenTreasures = new ArrayList();
     private ArrayList<TreasureKind> specificVisibleTreasures = new ArrayList();
-    
+    static final int MAXTREASURES=10; 
+            
     public BadConsequence(String text, int levels, int nVisible, int nHidden){
         this.text = text;
         this.levels = levels;
         this.nVisibleTreasures = nVisible;
         this.nHiddenTreasures = nHidden;
     }
-    
     public BadConsequence(String text, boolean death){
         this.text = text;
         this.death = death;
     }
-    
-    public BadConsequence(String text, int levels, 
-            ArrayList<TreasureKind> tVisible, ArrayList<TreasureKind> tHidden){
+
+    public BadConsequence(String text, int levels, ArrayList<TreasureKind> tVisible, ArrayList<TreasureKind> tHidden) {
         this.text = text;
         this.levels = levels;
         this.specificVisibleTreasures = tVisible;
         this.specificHiddenTreasures = tHidden;
     }
     
+    public ArrayList<TreasureKind> getSHiddenTreasures(){
+        return specificHiddenTreasures;
+    }
+    
+    public ArrayList<TreasureKind> getSVisibleTreasures(){
+        return specificVisibleTreasures;
+    }
+    
     public String getText(){
         return text;
-    }    
+    }
+    
     public int getLevels(){
         return levels;
     }
-    public int getNVisibleTreasures(){
+    
+    public int getnVisibleTreasures(){
         return nVisibleTreasures;
     }
-    public int getNHiddenTreasures(){
+    
+    public int getnHiddenTreasures(){
         return nHiddenTreasures;
     }
     public boolean getDeath(){
         return death;
     }
-    public String toString(){
-        String cadena =  "Mal rollo = " + text + " levels = " + Integer.toString(levels) +
-                " tesoros visibles = " + Integer.toString(nVisibleTreasures) +
-                " tesoros no visibles = " + Integer.toString(nHiddenTreasures) +
-                " death = " + Boolean.toString(death);
-        for(TreasureKind el: specificHiddenTreasures){
-            cadena = cadena + el.toString() + " ";
-        }
-        for(TreasureKind el: specificVisibleTreasures){
-            cadena = cadena + el.toString() + " ";
-        }
-
-//                " death = " + Boolean.toString(death) +
-//                " specificHiddenTreasures = " + specificHiddenTreasures.toString() +
-//                " specificVisibleTreasures = " + specificVisibleTreasures.toString();
-        return cadena;
-    }        
-
     
-    public boolean soloPierdeNiveles(){
-        if(levels>1 && nVisibleTreasures==0 && nHiddenTreasures==0 && death==false)
-            return true;
-        else
-            return false;
+    public void substractVisibleTreasures(Treasure t){
+        
     }
-    public boolean pierdeTesoros(){
-        if(specificHiddenTreasures != null || specificVisibleTreasures != null)
-            return true;
-        else
-            return false;
+    
+    public void substractHiddenTreasures(Treasure t){
+        
+    }
+        
+    public BadConsequence adjustToFitTreasureList(ArrayList<Treasure> v, ArrayList<Treasure> h){
+        return null;
     }
 
+    public boolean myBadConsequenceIsDeath(){
+        return false;
+    }
+
+    public String toString(){
+        return "Text = " + text +
+               " Levels = " + Integer.toString(levels) +
+               " vTreasures = " + Integer.toString(nVisibleTreasures) +
+               " hTreasures = " + Integer.toString(nHiddenTreasures) +
+               " Death = " + Boolean.toString(death);
+    }
+    public boolean isEmpty()
+    {
+    return 
+            levels==0 && 
+            nVisibleTreasures==0 && 
+            nHiddenTreasures==0 && 
+            specificVisibleTreasures.isEmpty() && 
+            specificHiddenTreasures.isEmpty();
+    }
+   
+    
+    
 }
